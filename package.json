@@ -4,6 +4,7 @@
     "build": "yarn vite build"
   },
   "dependencies": {
+    "sass": "^1.45.2",
     "vite": "^2.7.10"
   }
 }
