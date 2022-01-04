@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "yarn vite"
+  },
   "dependencies": {
     "vite": "^2.7.10"
   }
