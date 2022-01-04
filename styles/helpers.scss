@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use 'sass:string';
+@use 'variables' as *;
+
+@function color($theme, $color) {
+  $get-color: map.get($colors, $theme, $color);
+  @if $get-color {
+    @return $get-color;
+  } @else {
+    @error 'Function $get-color has an undefined value';
+  }
+}
+
+@function font($property) {
+  $get-parent: string.slice(#{&}, string.index(#{&}, '__') + 2);
+  $get-font: map.get($fonts, $get-parent, $property);
+  @if $get-font {
+    @return $get-font;
+  } @else {
+    @error 'Function $get-font has an undefined value';
+  }
+}
+
+

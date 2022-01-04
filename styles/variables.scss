@@ -1,0 +1,50 @@
+@use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+$f-family: 'Outfit', sans-serif;
+$f-size-light: 300;
+$f-size-regular: 400;
+$f-size-semi: 600;
+
+$radius: 1rem;
+
+$colors: (
+  primary:(
+    soft-blue: hsl(215, 51%, 70%),
+    cyan: hsl(178, 100%, 50%),
+  ),
+  neutral: (
+    main-bg: hsl(217, 54%, 11%),
+    card-bg:  hsl(216, 50%, 16%),
+    line:  hsl(215, 32%, 27%),
+    font:  hsl(0, 0%, 100%)
+  )
+);
+
+$fonts: (
+  title: (
+    size: 1.2rem,
+    color: map.get($colors, neutral, font),
+    weight: $f-size-semi
+  ),
+  description: (
+    size: 1rem,
+    color: map.get($colors, primary, soft-blue),
+    weight: $f-size-regular
+    ),
+  value: (
+    size: 0.8rem,
+    color: map.get($colors, primary, cyan),
+    weight: $f-size-semi
+  ),
+  expiration: (
+    size: 0.8rem,
+    color: map.get($colors, primary, soft-blue),
+    weight: $f-size-light
+    ),
+  creator: (
+    size: 0.9rem,
+    color: map.get($colors, primary, soft-blue),
+    weight: $f-size-regular
+  ),
+);
